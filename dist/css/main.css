@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Arapey:400,400i|Nanum+Myeongjo:400,700&display=swap");
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 3.5rem;
+  top: 3.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+  .menu-btn .btn-line {
+    width: 2.8rem;
+    height: .3rem;
+    margin: 0 0 .5rem 0;
+    background: #fff;
+    transition: all 0.5s ease-in-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(0.9px, -0.8px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      display: none; }
+
 html {
   font-size: 10px; }
 
