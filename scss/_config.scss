@@ -1,0 +1,26 @@
+$primary-color: #c2c2c2;
+$primary-lighter: #387fb7;
+$primary-darker: #142e42;
+$color-secondary: #08ffc8;
+$primary-text: #212121;
+$secondary-text: #757575;
+$devider-color: #BDBDBD;
+$text-icons: #FFFFFF;
+
+$show-home-image: true;
+$home-image: url("../img/header-background.jpg");
+$background-opacity: 0.9;
+
+@mixin easeOut {
+    transition: all 0.5s ease-in-out;
+}
+@mixin background {
+    @if $show-home-image {
+        &#bg-img {
+        background-image: radial-gradient(circle, rgba(20,46,66,0.45702030812324934) 0%, rgba(20,46,66,1) 53%, rgba(20,46,66,1) 100%), $home-image;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
