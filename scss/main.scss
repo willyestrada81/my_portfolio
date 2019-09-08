@@ -25,10 +25,7 @@ body {
     font-family: 'Arapey', serif;
     line-height: 1.5;
 
-    &#bg-img {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
+   
 }
 
 //Headings
@@ -70,7 +67,7 @@ main {
             padding: 0.2rem;
 
             &:hover {
-                color: $color-secondary;
+                color: $secondary-color;
                 @include easeOut();
             }
         }

@@ -34,3 +34,81 @@
     }
 
 }
+
+// Menu Overlay
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: .9;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    } 
+    &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background-color: #08ffc8;
+        background-image: linear-gradient(181deg, #08ffc8 0%, #204969 90%);
+        transform: translate3d(100%, 0, 0);
+        @include easeOut;
+
+        &.show {
+            transform: scale3d(1, 1, 1);
+        }
+
+        .nav-item {
+        transform: translate3d(160rem, 0, 0);
+        @include easeOut;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+
+        
+     }
+
+    .nav-link {
+        padding: 1rem;
+        font-size: 5rem;
+        display: inline-block;
+        
+        font-weight: 300;
+        @include easeOut;
+        &:hover {
+            transform: translateX(2rem);
+            @include easeOut;
+            background: $primary-color;
+            color: $secondary-color;
+            &::before {
+                
+            }
+        }
+    }
+
+     
+    }
+    li {
+        list-style: none;
+    }
+
+    //Delay for each nav item - slide by 0.1s
+    @for $x from 1 through 4 {
+         .nav-item:nth-child(#{$x}) {
+             transition-delay: $x * 0.1s;
+         }
+     }
+    
+}
