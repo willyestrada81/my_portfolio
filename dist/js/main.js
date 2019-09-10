@@ -32,3 +32,17 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+window.onscroll = () => {
+    const nav = document.querySelector("#navbar");
+    if (this.scrollY <= 10) nav.className = "";
+    else nav.className = "scroll";
+};
+
+
+function onMouseOver() {
+    document.getElementById("project-card").className = 'project-desc-no-img';
+}
+function onMouseOut() {
+    document.getElementById("project-card").className = 'project-desc';
+}

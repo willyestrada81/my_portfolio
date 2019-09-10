@@ -1,0 +1,44 @@
+#footer {
+    margin: 0;
+    height: 30vh;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        .footer-links {
+        padding-top: 3rem;
+
+        ul {
+            list-style: none;
+            padding: 3rem;
+            li {
+                padding: 1rem;
+                text-align: center;
+                
+                a {
+                    font-size: 2rem;
+                    font-family: $paragraph-font;
+                    &:hover {
+                    color: $secondary-color;
+                }
+                }
+                
+            }
+        }
+    }
+
+    .footer-icons {
+        a {
+       padding: .8rem;
+       margin: 1rem auto;
+&:hover {
+                    color: $secondary-color;
+                }
+    
+    }
+}
+    }
+}  
+

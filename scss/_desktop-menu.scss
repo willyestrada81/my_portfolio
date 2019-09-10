@@ -1,0 +1,40 @@
+#navbar{
+    margin: 0;
+    padding: 1rem 16rem;
+    z-index: 3;
+
+    a {
+        
+        img {
+            width: 18rem;
+        }
+    }
+
+    ul {
+        list-style: none;
+        float: right;
+
+        li {
+            display: inline;
+            padding: 2rem;
+
+            a {
+                font-size: 2rem;
+                text-transform: lowercase;
+                letter-spacing: .2rem;
+
+            }
+        }
+    }
+
+
+}
+.scroll {
+  background-color: $secondary-color;
+  box-shadow: $box-shadow;
+  @include easeOut();
+  a {
+      color: set-text-color($secondary-color);
+  }
+  
+}

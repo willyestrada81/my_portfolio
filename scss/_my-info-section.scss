@@ -1,4 +1,4 @@
-.about-me {
+#about-me {
     margin: 0;
     
 
@@ -7,16 +7,20 @@
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
-        // align-items: center;
         grid-gap: 2rem;
         width: 90%;
+        margin-bottom: 25rem;
+        padding-top: 16rem;
         
         img {
-            width: 60%;
+            width: 250px;
+            height: 250px;
+            align-self: center;
+            border-radius:300px;
+            border: 1px solid $secondary-color;
         }
         .my-info {
             padding: 3rem 2rem;
-            
 
             h2 {
                 line-height: 1.5;
@@ -27,7 +31,7 @@
 
                 &:after {
                     content: "";
-                    height: 2px;
+                    height: .1rem;
                     margin: 3rem 0;
                     background-color: $devider-color;
                     width:20%;
@@ -40,20 +44,39 @@
                 text-align: left;
                 font-size: 2rem;
                 font-family: $paragraph-font;
-                &:nth-last-child(2){
+                &:nth-last-child(1){
                     margin-bottom: 8rem !important;
                 }
 
             }
-
-            a {
-                position: absolute;
-                @include easeOut();
-                &:hover {
-                    @include moveDownOnHover();
-                    
+            .info-btn {
+              height: auto;
+                i {
+                    margin-right: 1rem;
                 }
+                &-1 {
+                    display: inline-block;
+                    &:hover {
+        @include moveDownOnHover();
+        @include easeOut();
+}
+                }
+                &-2 {
+                    display: inline-block;
+                    &:hover {
+        @include moveDownOnHover();
+        @include easeOut();
+}
+                }
+
+a {
+                margin-right: 5rem;
+                @include easeOut();
             }
+
+
+            }
+            
             
         }
     }

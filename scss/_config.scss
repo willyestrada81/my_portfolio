@@ -1,22 +1,43 @@
 $primary-color: #142e42;
-$primary-color-less-opacity: #142e42ad;
+$primary-color-less-opacity: #142e4260;
 $primary-lighter: #387fb7;
 $primary-darker: #142e42;
 $secondary-color: #12FFF7;
-$secondary-color-less-opacity: rgba(18, 255, 247, 0.384);
+$secondary-color-less-opacity: rgba(18, 255, 247, 0.11);
 $heading-color: #B3FFAB;
 $heading-color-less-opacity: rgba(179, 255, 171, 0.26);
 $primary-text: #212121;
-$secondary-text: #757575;
+$secondary-text: #fff7f7;
 $devider-color: #BDBDBD;
 $text-icons: #ebecee;
-$main-heading-font: 'Rubik', sans-serif;
-$sub-heading-font: 'Saira Stencil One', cursive, serif;
-$paragraph-font: 'Cormorant', serif;
+$heading-font: 'Quattrocento', serif;
+$paragraph-font: 'Fanwood Text', serif;
+$box-shadow: 5px 10px 50px 10px $secondary-color-less-opacity;
+$box-shadow-dark: 1px 60px 50px 30px rgba(212, 212, 212, 0.315);
+
 
 $show-home-image: true;
 $home-image: url("../img/header-background.jpg");
 $background-opacity: 0.9;
+
+@mixin lg-heading-font {
+    $heading-font: 'Quattrocento', serif;
+    line-height: 120px;
+    font-size: 10rem;
+    letter-spacing: 0px;
+}
+@mixin md-heading-font {
+    $heading-font: 'Quattrocento', serif;
+    line-height: 120px;
+    font-size: 5rem;
+    letter-spacing: 0px;
+}
+@mixin paragraph-font {
+    $paragraph-font: 'Fanwood Text', serif;
+    line-height: 30px;
+    font-size: 1.6rem;
+    letter-spacing: 20px;
+}
 
 @mixin easeOut {
     transition: all 0.5s ease-in-out;
@@ -39,11 +60,44 @@ $background-opacity: 0.9;
 // Set Text Color {
     @function set-text-color($color) {
         @if (lightness($color) > 40) {
-            @return #000;
+            @return $primary-color;
         } @else {
-            @return #ebecee;
+            @return $secondary-text;
         }
     }
+
+        .btn-primary {
+        font-family: $paragraph-font;
+        border-radius: 50px;
+        letter-spacing: .2rem;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: $heading-font;
+        padding: 1.2rem 2.2rem;
+        -webkit-box-shadow: $box-shadow;
+        box-shadow: $box-shadow;
+        color: $primary-color;
+        transition: all .6s;
+        text-align: center;
+        background-image: linear-gradient(to right, #12FFF7 51%, #B3FFAB 100%);
+        }
+    .btn-secondary {
+        font-family: $paragraph-font;
+        border-radius: 50px;
+        border: $secondary-color 1px solid;
+        letter-spacing: .2rem;;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: $heading-font;
+        padding: 1.2rem 2.2rem;
+        -webkit-box-shadow: $box-shadow;
+        box-shadow: $box-shadow;
+        color: $secondary-color;
+        transition: all .6s;
+        text-align: center;
+        }
 // Media Query Mixins
 
 @mixin deviceSm {

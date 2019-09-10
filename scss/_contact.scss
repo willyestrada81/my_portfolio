@@ -1,0 +1,103 @@
+.contact-form {
+    margin: 0;
+    height: auto;
+    background: $secondary-text;
+    color: set-text-color($secondary-text);
+    padding-bottom: 15rem;
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-content: center;
+        
+        // &:after {
+        //             content: "";
+        //             height: 1px;
+        //             margin: 3rem auto;
+        //             background-color: $devider-color;
+        //             width:80%;
+        //             display: inherit;
+        //             margin-top: 16rem;
+        //         }
+
+       
+        
+
+        h2 {
+            margin-top: 8rem;
+            line-height: 1.5;
+                font-size: 6rem;
+                margin-bottom: 6rem;
+                font-style: italic;
+                &:after {
+                    content: "";
+                    height: .1rem;
+                    margin: 3rem auto;
+                    background-color: $devider-color;
+                    width:40%;
+                    display: inherit;
+                }
+                }
+
+                h4 {
+                    margin-top: 1rem;
+            line-height: 1.5;
+                font-size:4rem;
+                margin-bottom: 8rem;
+                }
+                 .contact-me {
+                     display: grid;
+                     width: 40%;
+                     grid-gap: 1rem;
+
+            input {
+                padding: 2rem 1rem;
+                background: white;
+                outline: none;
+                border: 0;
+                font-family: $paragraph-font;
+                font-size: 1.5rem;
+                 -webkit-box-shadow: $box-shadow-dark;
+                 box-shadow: $box-shadow-dark;
+                @include easeOut();
+
+                &:hover {
+                    border: .3px solid $primary-color;
+                    @include easeOut();
+                    
+                    
+                }
+            }
+            textarea {
+                resize: none;
+                height: 130px;
+                padding: 2rem 1rem;
+                background: white;
+                outline: none;
+                border: none;
+                font-family: $paragraph-font;
+                font-size: 1.5rem;
+                 -webkit-box-shadow: $box-shadow-dark;
+        box-shadow: $box-shadow-dark;
+        margin-bottom: 3rem;
+                @include easeOut();
+                &:hover {
+                    border: .3px solid $primary-color;
+                    @include easeOut();
+                }
+            }
+            button {
+                margin: 2rem auto;
+                color: set-text-color($secondary-color);
+                &:hover {
+                    -webkit-box-shadow: $box-shadow-dark;
+        box-shadow: $box-shadow-dark;
+         @include easeOut();
+                }
+            }
+        }
+        }
+       
+        
+    }

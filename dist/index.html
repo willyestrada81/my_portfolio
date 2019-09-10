@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,95 +9,218 @@
     <link rel="stylesheet" href="/dist/css/main.css">
     <script src="https://kit.fontawesome.com/d2d9d0e374.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
-        <nav class="menu">
-            <div class="menu-branding">
-                <div class="portait">
-
-                </div>
+            <nav id="navbar">
+                <a href="#" id="logo" >
+                    <img src="/dist/img/logo_white.png" alt="">
+                </a>
+                <ul>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="nav-link">My Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+        <div class="mobile-menu">
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
             </div>
-            <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="/" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="work.html" class="nav-link">My Work</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact me</a>
-                </li>
-            </ul>
-        </nav>
+            <nav class="menu">
+                <div class="menu-branding">
+                    <div class="portait">
+            
+                    </div>
+                </div>
+                <ul class="menu-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="work.html" class="nav-link">My Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact me</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
     </header>
     <main class="home" id="bg-img">
-        <h1 class="lg-heading">William
+        <h1 class="md-heading">William
             <span class="text-secondary">Estrada</span>
         </h1>
-        <h2 class="sm-heading">Full Stack Web Developer & Entrepreneur</h2>
-        <h2 class="md-heading">welcome</h2>
-        <div class="vertical-devider" >
+        <h2 class="lg-heading">Full Stack Web Developer & Entrepreneur</h2>
+        <h2 class="sm-heading">welcome</h2>
+        <div class="vertical-devider">
             <div class="vertical-tip"></div>
         </div>
-        
+
         <div class="main-btn">
-                <a class="btn-primary">
-                    Keep Reading
-                </a>
+            <a href="#about-me" class="btn-primary">
+                Keep Reading
+            </a>
         </div>
-        
-           
-        <!-- <div class="icons">
-            <a href="#">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-dribbble fa-2x"></i>
-            </a>
-        </div> -->
+
     </main>
-    <section class="about-me">
+    <section id="about-me" class="about-me">
         <div class="content-wrap">
             <img src="../dist/img/my-image.jpg" alt="This is a photo of William Estrada">
             <div class="my-info">
                 <h2>Who I am...</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure qui distinctio nostrum rem velit vero veniam voluptatum maiores illum error Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus veritatis quam eum quis voluptatem. Nobis id ipsam dignissimos debitis ut deserunt repellat soluta suscipit. Eius.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta alias nesciunt optio est voluptatum debitis sed provident accusamus ut id, nobis culpa aut totam at sunt numquam tempore tempora, consequatur, voluptatem vero saepe assumenda similique. Unde iusto voluptatibus odit consequuntur corrupti autem officiis ex esse.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, exercitationem atque non delectus fugit molestiae magni odio quaerat omnis sed, quos nulla ea ad voluptate.</p>
-                <a href="#" class="btn-primary" >See my work</a>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure qui distinctio nostrum rem velit vero veniam
+                        voluptatum . Minus veritatis quam eum quis voluptatem. Nobis id ipsam dignissimos debitis ut deserunt
+                        repellat soluta suscipit. Eius.</p>
+                    <p>Lorem ipsum dolor sit, nobis culpa aut totam at sunt numquam tempore tempora, consequatur, voluptatem
+                        vero saepe assumenda similique. Unde iusto voluptatibus odit consequuntur corrupti autem officiis
+                        ex esse.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita, exercitationem atque non delectus
+                        fugit molestiae magni odio quaerat omnis sed, quos nulla ea ad voluptate.</p>
+                </div>
+                <div class="info-btn">
+                    <div class="info-btn-1">
+                        <a href="#" class="btn-primary">See my work</a>
+                    </div>
+                    <div class="info-btn-2">
+                        <a href="/dist/files/William Estrada Resume.pdf" download class="btn-secondary">
+                            <i class="fas fa-download"></i>Download CV
+                        </a>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </section>
-    <section class="contact-form">
+    <section id="projects">
+        <div class="projects">
+            <h2>My Work</h2>
+            <div class="project-card">
+                <div class="wrapper">
+                    <img src="../dist/img/header-background.jpg" alt="">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Project Name</h3>
+                            <p>Node.js</p>
+                            <p>Express.js</p>
+                            <p>MongoDB</p>
+                            <a href="" class="project-desc-btn btn-secondary">learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="../dist/img/header-background.jpg" alt="">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Project Name</h3>
+                            <p>Node.js</p>
+                            <p>Express.js</p>
+                            <p>MongoDB</p>
+                            <a href="" class="project-desc-btn btn-secondary">learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="../dist/img/header-background.jpg" alt="">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Project Name</h3>
+                            <p>Node.js</p>
+                            <p>Express.js</p>
+                            <p>MongoDB</p>
+                            <a href="" class="project-desc-btn btn-secondary">learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="../dist/img/header-background.jpg" alt="">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Project Name</h3>
+                            <p>Node.js</p>
+                            <p>Express.js</p>
+                            <p>MongoDB</p>
+                            <a href="" class="project-desc-btn btn-secondary">learn More</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+    <section id="contact" class="contact-form">
         <div class="contact">
             <h2>Contact Me</h2>
-            <form action="" class="contact">
+            <h4>Let's make your ideas a reality</h4>
+            <form action="" class="contact-me" id="contact_id">
                 <label for="name_id"></label>
                 <input type="text" name="name" id="name_id" placeholder="Your name" required>
                 <label for="email"></label>
                 <input type="email" name="email" id="email_id" placeholder="Your Email" required>
                 <label for="message"></label>
-                <textarea name="message" id="message-id" cols="30" rows="10" spellcheck="true" ></textarea>
-                <button type="submit">Say hi!</button>
+                <textarea form="contact_id" name="message" id="message-id" spellcheck="true" placeholder="Your Message"></textarea>
+                <button class="btn-secondary" type="submit">Say hi!</button>
             </form>
         </div>
-    
+
     </section>
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <a href="#">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#">My Work</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <!-- <li><a href="#">About Me</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-icons">
+
+                <a href="#">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <!-- <a href="#">
+                    <i class="fab fa-dribbble fa-2x"></i>
+                </a> -->
+                <a href="mailto:name@email.com">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a href="/dist/files/William Estrada Resume.pdf" download>
+                    <i class="fas fa-download fa-2x"></i>
+                </a>
+
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
