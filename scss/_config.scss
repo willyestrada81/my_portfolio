@@ -1,11 +1,18 @@
-$primary-color: #204969;
+$primary-color: #142e42;
+$primary-color-less-opacity: #142e42ad;
 $primary-lighter: #387fb7;
 $primary-darker: #142e42;
-$secondary-color: #08ffc8;
+$secondary-color: #12FFF7;
+$secondary-color-less-opacity: rgba(18, 255, 247, 0.384);
+$heading-color: #B3FFAB;
+$heading-color-less-opacity: rgba(179, 255, 171, 0.26);
 $primary-text: #212121;
 $secondary-text: #757575;
 $devider-color: #BDBDBD;
-$text-icons: #FFFFFF;
+$text-icons: #ebecee;
+$main-heading-font: 'Rubik', sans-serif;
+$sub-heading-font: 'Saira Stencil One', cursive, serif;
+$paragraph-font: 'Cormorant', serif;
 
 $show-home-image: true;
 $home-image: url("../img/header-background.jpg");
@@ -17,10 +24,56 @@ $background-opacity: 0.9;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-        background-image: radial-gradient(circle, rgba(20,46,66,0.45702030812324934) 0%, rgba(20,46,66,1) 53%, rgba(20,46,66,1) 100%), $home-image;
+        background-image: radial-gradient(circle, $primary-color-less-opacity 0%, $primary-color 53%, $primary-color 100%), $home-image;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
     }
+}
+
+@mixin moveDownOnHover {
+        transform: translateY(10%);
+}
+
+// Set Text Color {
+    @function set-text-color($color) {
+        @if (lightness($color) > 40) {
+            @return #000;
+        } @else {
+            @return #ebecee;
+        }
+    }
+// Media Query Mixins
+
+@mixin deviceSm {
+    @media screen and (max-width: 500px ) {
+        @content;
+    }
+}
+@mixin deviceMd {
+    @media screen and (max-width: 768px ) {
+        @content;
+    }
+}
+@mixin deviceLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+@mixin deviceXl {
+    @media screen and (min-width: 1171px)  {
+        @content;
+    }
+}
+
+@mixin slideDown {
+    animation: slide 2s infinite;
+    @keyframes slide
+{
+    0%   {transform: translateY(-5%)}
+    100% {transform: translateY(5%)}
+    
+    
+}
 }

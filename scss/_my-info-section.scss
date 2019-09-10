@@ -1,0 +1,61 @@
+.about-me {
+    margin: 0;
+    
+
+    .content-wrap {
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        // align-items: center;
+        grid-gap: 2rem;
+        width: 90%;
+        
+        img {
+            width: 60%;
+        }
+        .my-info {
+            padding: 3rem 2rem;
+            
+
+            h2 {
+                line-height: 1.5;
+                font-size: 6rem;
+                text-align: left;
+                margin-bottom: 3rem;
+                font-style: italic;
+
+                &:after {
+                    content: "";
+                    height: 2px;
+                    margin: 3rem 0;
+                    background-color: $devider-color;
+                    width:20%;
+                    display: inherit;
+                }
+            }
+            p {
+                margin-bottom: 2rem;
+                width: 80%;
+                text-align: left;
+                font-size: 2rem;
+                font-family: $paragraph-font;
+                &:nth-last-child(2){
+                    margin-bottom: 8rem !important;
+                }
+
+            }
+
+            a {
+                position: absolute;
+                @include easeOut();
+                &:hover {
+                    @include moveDownOnHover();
+                    
+                }
+            }
+            
+        }
+    }
+
+}

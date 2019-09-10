@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Arapey:400,400i|Nanum+Myeongjo:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant:300,400,600|Rubik|Saira+Stencil+One&display=swap');
 
-// font-family: 'Nanum Myeongjo', serif;
-// font-family: 'Arapey', serif;
+
 
 @import 'config';
-@import 'menu';
+
+
 
 
 html {
@@ -16,9 +16,10 @@ html {
 }
 
 body {
-    @include background();
+    // outline: 1rem solid #fff;
+    outline-offset: -1rem;
     background: $primary-color;
-    color: azure;
+    color: set-text-color($primary-color); 
     height: 100%;
     margin: 0;
     padding: 0;
@@ -33,15 +34,62 @@ body {
 h1, h2, h3 {
     margin: 0;
     font-weight: 400;
+    text-align: center;
 
     &.lg-heading {
         font-size: 6rem;
+        font-family: $paragraph-font;
+        color: $heading-color;
+        letter-spacing: .5rem;
     }
     &.sm-heading {
-        font-size: 3rem;
-        margin-bottom: 2rem;
+        font-size: 6rem;
+        margin-bottom: 6rem;
         padding: 0.2rem 1rem;
+        letter-spacing: 1.5rem;
+        line-height: 1.5;
+        background: linear-gradient(to right, $secondary-color 51%, #B3FFAB 100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        font-family: $sub-heading-font;
+
+        &:hover {
+            text-shadow: 3px 3px 10px $secondary-color-less-opacity;
+             @include easeOut();
+        }
     }
+    &.md-heading {
+        font-size: 4rem;
+        margin-bottom: 8rem;
+        padding: 0.2rem 1rem;
+        font-family: $sub-heading-font;
+        text-decoration: underline;
+    }
+}
+
+.vertical-devider {
+            height: 250px;
+            background-color: #12FFF7;
+            width: 1px;
+            display: block;
+            margin: auto;
+            position: relative;
+            margin-bottom: 5rem;
+            @include slideDown();
+            @include easeOut();
+            border-top-left-radius: 13px;
+}
+.vertical-tip {
+    height: 7px;
+            background-color: #12FFF7;
+            width: 7px;
+            display: block;
+            margin: auto;
+            border-radius: 50px;
+            position: absolute;
+            top: 250px;
+            right: -3px;
+
 }
 
 a {
@@ -55,9 +103,14 @@ header {
     width: 100%;
 }
 
+
 main {
     padding: 4rem;
     height: 100vh;
+    @include background();
+
+    
+    
 
     .icons {
         margin-top: 1rem;
@@ -79,3 +132,34 @@ main {
         }
     }
 }
+
+        .main-btn {
+        margin: 0 auto;
+        width: 180px;
+        @include easeOut();
+        &:hover {
+        @include moveDownOnHover();
+        @include easeOut();
+        }
+       
+
+        
+    }
+    .btn-primary {
+        padding: 1.2rem 2.2rem;
+        border-radius: 30px;
+        font-family: $paragraph-font;
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $primary-color;
+        background-image: linear-gradient(to right, #12FFF7 51%, #B3FFAB 100%);
+        font-weight: 700;
+        -webkit-box-shadow: 5px 10px 50px 10px $secondary-color-less-opacity;
+        box-shadow: 5px 10px 50px 10px $secondary-color-less-opacity;
+        cursor: pointer;
+        }
+
+@import 'menu';
+@import 'my-info-section';
+
+@import 'mobile';
