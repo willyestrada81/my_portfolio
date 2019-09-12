@@ -1,6 +1,7 @@
 #about-me {
     margin: 0;
     
+    
 
     .content-wrap {
         display: grid;
@@ -11,19 +12,25 @@
         width: 90%;
         margin-bottom: 25rem;
         padding-top: 16rem;
+        @include easeOut();
         
-        img {
+        .my-photo {
+            img{
             width: 250px;
             height: 250px;
             align-self: center;
             border-radius:300px;
             border: 1px solid $secondary-color;
         }
+        }
+        
         .my-info {
-            padding: 3rem 2rem;
+            padding: 0 2rem 3rem 2rem;
+            
 
             h2 {
                 line-height: 1.5;
+                margin-top: 0;
                 font-size: 6rem;
                 text-align: left;
                 margin-bottom: 3rem;
@@ -51,6 +58,7 @@
             }
             .info-btn {
               height: auto;
+              
                 i {
                     margin-right: 1rem;
                 }
@@ -78,6 +86,29 @@ a {
             }
             
             
+        }
+
+        .photo-icons {
+            p {
+                font-size: 2rem;
+                margin: 4rem 0;
+            }
+            display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+            .icon-group {
+        
+                img {
+                    width: 50px;
+                    margin: .5rem .5rem;
+                    background: $secondary-color;
+                    border-radius: 50%;
+                    padding: 8px;
+                
+                    
+                }
+            }
         }
     }
 

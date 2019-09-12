@@ -16,14 +16,25 @@
 
         li {
             display: inline;
-            padding: 2rem;
+            padding: 4rem 2rem 3.5rem 2rem;
+            
+            &:hover {
+                background: $primary-color;
+                color: $secondary-color;
+                @include easeOut();
+            }
+            &:hover a {
+                color: $secondary-color;
+                @include easeOut();
+            }
 
             a {
                 font-size: 2rem;
                 text-transform: lowercase;
                 letter-spacing: .2rem;
-
-            }
+               
+                }
+            
         }
     }
 

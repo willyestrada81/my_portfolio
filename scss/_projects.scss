@@ -28,8 +28,8 @@
             grid-template-columns: 1fr 1fr;
             width: 80%;
             margin: 0 auto;
-            grid-auto-rows: minmax(480px, auto);
-            grid-gap: 1rem;
+            grid-auto-rows: minmax(420px, auto);
+            // grid-gap: 1rem;
 
             .wrapper {
                 position: relative;
@@ -46,8 +46,7 @@
                 
             }
                 &:hover {
-                outline: 1px solid $secondary-color;
-                outline-offset: -5;
+                border: 1px solid $secondary-color;
                 @include easeOut();
                 
             }
@@ -55,8 +54,8 @@
             img {
                 width: 100%;
                 opacity: 1;
-                height: auto;
-                transform: scale(50% 20%);
+                height: 100%;
+                object-fit: fill;
                 
                 @include easeOut();
 

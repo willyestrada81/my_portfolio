@@ -68,6 +68,10 @@ header {
         @include md-heading-font();
         color: $heading-color;
         padding-top: 3rem;
+        .text-secondary {
+            color: $secondary-text;
+            background: lighten($color: $primary-color, $amount: 10);
+        }
     }
     &.lg-heading {
         @include lg-heading-font();

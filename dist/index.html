@@ -11,20 +11,20 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
             <nav id="navbar">
                 <a href="#" id="logo" >
                     <img src="/dist/img/logo_white.png" alt="">
                 </a>
                 <ul>
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Home</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">About Me</a>
+                        <a href="#about-me" class="nav-link">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a href="work.html" class="nav-link">My Work</a>
+                        <a href="#projects" class="nav-link">My Work</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact me</a>
@@ -44,26 +44,26 @@
                     </div>
                 </div>
                 <ul class="menu-nav">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="work.html" class="nav-link">My Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact me</a>
-                    </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">My Work</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact me</a>
+                </li>
                 </ul>
             </nav>
         </div>
         
     </header>
     <main class="home" id="bg-img">
-        <h1 class="md-heading">William
-            <span class="text-secondary">Estrada</span>
+        <h1 class="md-heading">Hi! I'm 
+            <span class="text-secondary">William Estrada.</span>
         </h1>
         <h2 class="lg-heading">Full Stack Web Developer & Entrepreneur</h2>
         <h2 class="sm-heading">welcome</h2>
@@ -80,7 +80,27 @@
     </main>
     <section id="about-me" class="about-me">
         <div class="content-wrap">
-            <img src="../dist/img/my-image.jpg" alt="This is a photo of William Estrada">
+            <div class="photo-icons">
+                <div class="my-photo">
+                    <img class="my-photo" src="../dist/img/my-image.jpg" alt="This is a photo of William Estrada">
+                </div>
+                <p>Some of the technologies I use:</p>
+                <div class="icon-group">
+                    <img src="/dist/img/SVG/html5.svg" alt="">
+                    <img src="/dist/img/SVG/css3.svg" alt="">
+                    <img src="/dist/img/SVG/sass.svg" alt="">
+                    <img src="/dist/img/SVG/bootstrap.svg" alt="">
+                    <img src="/dist/img/SVG/javascript.svg" alt="">
+                </div>
+                <div class="icon-group">
+                    <img src="/dist/img/SVG/node-dot-js.svg" alt="">
+                    <img src="/dist/img/SVG/mongodb.svg" alt="">
+                    <img src="/dist/img/SVG/mysql.svg" alt="">
+                    <img src="/dist/img/SVG/git.svg" alt="">
+                    <img src="/dist/img/SVG/heroku.svg" alt="">
+                </div>
+            </div>
+            
             <div class="my-info">
                 <h2>Who I am...</h2>
                 <div>
@@ -113,7 +133,19 @@
             <h2>My Work</h2>
             <div class="project-card">
                 <div class="wrapper">
-                    <img src="../dist/img/header-background.jpg" alt="">
+                    <img src="../dist/img/Screen_Shot_blog.png" alt="">
+                    <div class="overlay">
+                        <div class="content">
+                            <h3>Personal blog site</h3>
+                            <p>Node.js</p>
+                            <p>Express.js</p>
+                            <p>MongoDB</p>
+                            <a href="" class="project-desc-btn btn-secondary">learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="../dist/img/Screen_Shot_futura.png" alt="">
                     <div class="overlay">
                         <div class="content">
                             <h3>Project Name</h3>
@@ -128,19 +160,7 @@
                     <img src="../dist/img/header-background.jpg" alt="">
                     <div class="overlay">
                         <div class="content">
-                            <h3>Project Name</h3>
-                            <p>Node.js</p>
-                            <p>Express.js</p>
-                            <p>MongoDB</p>
-                            <a href="" class="project-desc-btn btn-secondary">learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="wrapper">
-                    <img src="../dist/img/header-background.jpg" alt="">
-                    <div class="overlay">
-                        <div class="content">
-                            <h3>Project Name</h3>
+                            <h3>Personal blog site</h3>
                             <p>Node.js</p>
                             <p>Express.js</p>
                             <p>MongoDB</p>

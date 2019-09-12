@@ -78,7 +78,6 @@ $background-opacity: 0.9;
         -webkit-box-shadow: $box-shadow;
         box-shadow: $box-shadow;
         color: $primary-color;
-        transition: all .6s;
         text-align: center;
         background-image: linear-gradient(to right, #12FFF7 51%, #B3FFAB 100%);
         }
@@ -95,8 +94,8 @@ $background-opacity: 0.9;
         -webkit-box-shadow: $box-shadow;
         box-shadow: $box-shadow;
         color: $secondary-color;
-        transition: all .6s;
         text-align: center;
+        
         }
 // Media Query Mixins
 
@@ -122,10 +121,12 @@ $background-opacity: 0.9;
 }
 
 @mixin slideDown {
-    animation: slide 2s infinite;
+    animation: slide 3s infinite;
+    
     @keyframes slide
 {
     0%   {transform: translateY(-5%)}
+    
     100% {transform: translateY(5%)}
     
     
