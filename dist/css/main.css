@@ -31,16 +31,16 @@
 
 #navbar {
   margin: 0;
-  padding: 1rem 16rem;
+  padding: 1rem 16rem 0 16rem;
   z-index: 3; }
-  #navbar a img {
-    width: 18rem; }
+  #navbar img {
+    width: 6rem; }
   #navbar ul {
     list-style: none;
     float: right; }
     #navbar ul li {
       display: inline;
-      padding: 4rem 2rem 3.5rem 2rem; }
+      padding: 4rem 2rem 3.2rem 2rem; }
       #navbar ul li:hover {
         background: #142e42;
         color: #12FFF7;
@@ -62,7 +62,8 @@
 
 #projects {
   margin: 0;
-  height: auto; }
+  height: auto;
+  box-sizing: border-box; }
   #projects .projects {
     padding: 4rem 16rem;
     margin-bottom: 22rem; }
@@ -77,7 +78,7 @@
         content: "";
         height: .1rem;
         margin: 3rem auto;
-        background-color: #BDBDBD;
+        background-color: rgba(189, 189, 189, 0.596);
         width: 10%;
         display: inherit; }
     #projects .projects .project-card {
@@ -85,7 +86,8 @@
       grid-template-columns: 1fr 1fr;
       width: 80%;
       margin: 0 auto;
-      grid-auto-rows: minmax(420px, auto); }
+      grid-row-gap: .5rem;
+      grid-column-gap: .9rem; }
       #projects .projects .project-card .wrapper {
         position: relative;
         margin: 0 auto; }
@@ -95,7 +97,6 @@
         #projects .projects .project-card .wrapper:hover img {
           opacity: .1; }
         #projects .projects .project-card .wrapper:hover {
-          border: 1px solid #12FFF7;
           transition: all 0.5s ease-in-out; }
         #projects .projects .project-card .wrapper img {
           width: 100%;
@@ -123,6 +124,13 @@
             display: block;
             margin: 4rem auto;
             width: 200px; }
+          #projects .projects .project-card .wrapper .content .project-desc-btn {
+            border: #12FFF7 1px solid;
+            letter-spacing: 0;
+            font-size: 1.5rem;
+            padding: 1rem 1.5rem; }
+            #projects .projects .project-card .wrapper .content .project-desc-btn i {
+              padding-left: 1rem; }
         #projects .projects .project-card .wrapper .overlay {
           opacity: 0;
           transition: all 0.5s ease-in-out; }
@@ -142,7 +150,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Arapey', serif;
   line-height: 1.5;
   font-family: 'Quattrocento', serif;
   overflow-x: hidden; }
@@ -195,10 +202,9 @@ header {
         text-shadow: 3px 3px 10px rgba(18, 255, 247, 0.11);
         transition: all 0.5s ease-in-out; }
     .home h1.sm-heading, .home h2.sm-heading {
-      font-size: 4rem;
+      font-size: 3rem;
       margin-bottom: 8rem;
-      padding: 0.2rem 1rem;
-      text-decoration: underline; }
+      padding: 0.2rem 1rem; }
   .home .main-btn {
     text-align: center;
     transition: all 0.5s ease-in-out; }
@@ -314,6 +320,7 @@ header {
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    align-items: start;
     grid-gap: 2rem;
     width: 90%;
     margin-bottom: 25rem;
@@ -338,7 +345,7 @@ header {
           content: "";
           height: .1rem;
           margin: 3rem 0;
-          background-color: #BDBDBD;
+          background-color: rgba(189, 189, 189, 0.596);
           width: 20%;
           display: inherit; }
       #about-me .content-wrap .my-info p {
@@ -386,7 +393,8 @@ header {
   height: auto;
   background: #fff7f7;
   color: #142e42;
-  padding-bottom: 15rem; }
+  padding-bottom: 15rem;
+  transition: all 0.5s ease-in-out; }
   .contact-form .contact {
     display: grid;
     grid-template-columns: 1fr;
@@ -402,7 +410,7 @@ header {
         content: "";
         height: .1rem;
         margin: 3rem auto;
-        background-color: #BDBDBD;
+        background-color: rgba(189, 189, 189, 0.596);
         width: 40%;
         display: inherit; }
     .contact-form .contact h4 {
@@ -425,7 +433,7 @@ header {
         box-shadow: 1px 60px 50px 30px rgba(212, 212, 212, 0.315);
         transition: all 0.5s ease-in-out; }
         .contact-form .contact .contact-me input:hover {
-          border: 0.3px solid #142e42;
+          border: 0.3px solid rgba(189, 189, 189, 0.596);
           transition: all 0.5s ease-in-out; }
       .contact-form .contact .contact-me textarea {
         resize: none;
@@ -438,10 +446,9 @@ header {
         font-size: 1.5rem;
         -webkit-box-shadow: 1px 60px 50px 30px rgba(212, 212, 212, 0.315);
         box-shadow: 1px 60px 50px 30px rgba(212, 212, 212, 0.315);
-        margin-bottom: 3rem;
-        transition: all 0.5s ease-in-out; }
+        margin-bottom: 3rem; }
         .contact-form .contact .contact-me textarea:hover {
-          border: 0.3px solid #142e42;
+          border: 0.3px solid rgba(189, 189, 189, 0.596);
           transition: all 0.5s ease-in-out; }
       .contact-form .contact .contact-me button {
         margin: 2rem auto;
@@ -453,24 +460,18 @@ header {
 
 #footer {
   margin: 0;
-  height: 30vh; }
+  height: 13vh; }
+  #footer p {
+    color: rgba(189, 189, 189, 0.596);
+    font-size: 1.5rem;
+    text-align: center; }
   #footer .footer-container {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center; }
-    #footer .footer-container .footer-links {
-      padding-top: 3rem; }
-      #footer .footer-container .footer-links ul {
-        list-style: none;
-        padding: 3rem; }
-        #footer .footer-container .footer-links ul li {
-          padding: 1rem;
-          text-align: center; }
-          #footer .footer-container .footer-links ul li a {
-            font-size: 2rem;
-            font-family: "Fanwood Text", serif; }
-            #footer .footer-container .footer-links ul li a:hover {
-              color: #12FFF7; }
+    justify-items: center;
+    border-bottom: 1px solid rgba(189, 189, 189, 0.596);
+    padding: 3rem;
+    margin: 0 12rem; }
     #footer .footer-container .footer-icons a {
       padding: .8rem;
       margin: 1rem auto; }
@@ -484,27 +485,21 @@ header {
   .mobile-menu {
     display: none; } }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    grid-row-gap: .5rem;
+    grid-column-gap: .9rem; }
+    .project-card .wrapper {
+      position: relative;
+      margin: 0 auto; }
   .mobile-menu {
     display: none; } }
 
-@media screen and (max-width: 768px) {
-  #navbar {
-    display: none; }
-  .lg-heading {
-    font-size: 2rem;
-    line-height: 1.5; }
-  .sm-heading {
-    font-size: 4rem;
-    margin: 2rem 1rem;
-    letter-spacing: .6rem; }
-  .md-heading {
-    font-size: 4rem;
-    margin: 2rem 1rem; }
-  .content-wrap {
-    display: block; } }
-
-@media screen and (max-width: 500px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   #navbar {
     display: none; }
   .home h1.md-heading, .home h2.md-heading {
@@ -512,7 +507,7 @@ header {
     font-size: 5rem;
     letter-spacing: 0px;
     font-size: 3rem;
-    padding-top: 6rem;
+    padding-top: 2rem;
     line-height: 1.3;
     margin-bottom: 1rem; }
   .home h1.lg-heading, .home h2.lg-heading {
@@ -523,16 +518,20 @@ header {
     line-height: 1.3;
     margin-bottom: 1rem; }
   .home h1.sm-heading, .home h2.sm-heading {
-    font-size: 4rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    padding: 0.2rem 1rem; }
+    line-height: 1.3;
+    letter-spacing: 0;
+    padding: 0;
+    overflow-x: none; }
   .home .vertical-devider {
-    height: 150px;
-    margin-bottom: 3rem; }
+    height: 120px;
+    margin-bottom: 3rem;
+    margin: 2rem auto; }
   .home .vertical-tip {
     height: 7px;
     position: absolute;
-    top: 150px;
+    top: 120px;
     right: -3px; }
   #about-me {
     margin: 0; }
@@ -561,16 +560,29 @@ header {
           width: 100%;
           text-align: center;
           font-size: 2rem;
-          padding: 0 2rem; }
+          padding: 0 1rem; }
           #about-me .content-wrap .my-info p:nth-last-child(1) {
             margin-bottom: 6rem !important; }
         #about-me .content-wrap .my-info .info-btn {
           display: block; }
           #about-me .content-wrap .my-info .info-btn-1 {
+            display: block;
             margin-bottom: 5rem; }
           #about-me .content-wrap .my-info .info-btn a {
-            margin: 0 auto;
+            margin: auto;
             transition: all 0.5s ease-in-out; }
+      #about-me .content-wrap .photo-icons {
+        display: block;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center; }
+        #about-me .content-wrap .photo-icons .icon-group img {
+          width: 50px;
+          height: 50px;
+          margin: .5rem .5rem;
+          background: #12FFF7;
+          border-radius: 50%;
+          padding: 8px; }
   .menu-btn {
     right: 2.5rem;
     top: 2.5rem; }
@@ -599,13 +611,14 @@ header {
           content: "";
           height: .2rem;
           margin: 3rem auto;
-          background-color: #BDBDBD;
+          background-color: rgba(189, 189, 189, 0.596);
           width: 20%; }
       .contact-form .contact h4 {
         margin-top: 1rem;
         line-height: 1.2;
         font-size: 3rem;
-        margin-bottom: 8rem; }
+        margin-bottom: 8rem;
+        padding: 0 2rem; }
       .contact-form .contact .contact-me {
         display: grid;
         width: 80%;
@@ -613,21 +626,19 @@ header {
         margin: 0 auto; }
   #footer {
     margin: 0;
-    height: 35vh; }
+    height: 8vh; }
+    #footer p {
+      color: rgba(189, 189, 189, 0.596);
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem; }
     #footer .footer-container {
       display: grid;
       grid-template-columns: 1fr;
-      justify-items: center; }
-      #footer .footer-container .footer-links {
-        padding-top: 1rem; }
-        #footer .footer-container .footer-links ul {
-          list-style: none;
-          margin-bottom: 1rem; }
-          #footer .footer-container .footer-links ul li {
-            padding: .6rem;
-            text-align: center; }
-            #footer .footer-container .footer-links ul li a {
-              font-size: 1.6rem; }
+      justify-items: center;
+      border-bottom: 1px solid rgba(189, 189, 189, 0.596);
+      padding: .5rem;
+      margin: 1rem 2rem; }
       #footer .footer-container .footer-icons a {
         padding: .8rem;
         margin: 1rem auto; }
@@ -682,4 +693,210 @@ header {
           transition: all 0.5s ease-in-out; }
         #projects .projects .project-card .wrapper .wrapper:hover img {
           opacity: .5;
-          transition: all 0.5s ease-in-out; } }
+          transition: all 0.5s ease-in-out; }
+  .photo-icons .icon-group img {
+    width: 150px;
+    margin: .5rem .5rem;
+    background: #12FFF7;
+    border-radius: 50%;
+    padding: 8px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #navbar {
+    display: none; }
+  .home h1.md-heading, .home h2.md-heading {
+    line-height: 120px;
+    font-size: 5rem;
+    letter-spacing: 0px;
+    font-size: 3rem;
+    padding-top: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem; }
+  .home h1.lg-heading, .home h2.lg-heading {
+    line-height: 120px;
+    font-size: 10rem;
+    letter-spacing: 0px;
+    font-size: 4rem;
+    line-height: 1.3;
+    margin-bottom: 1rem; }
+  .home h1.sm-heading, .home h2.sm-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    letter-spacing: 0;
+    padding: 0;
+    overflow-x: none; }
+  .home .vertical-devider {
+    height: 120px;
+    margin-bottom: 3rem; }
+  .home .vertical-tip {
+    height: 7px;
+    position: absolute;
+    top: 120px;
+    right: -3px; }
+  #about-me {
+    margin: 0; }
+    #about-me .content-wrap {
+      display: block;
+      margin-bottom: 9rem;
+      padding-top: 8rem;
+      text-align: center; }
+      #about-me .content-wrap img {
+        width: 150px;
+        height: 150px; }
+      #about-me .content-wrap .my-info {
+        display: block;
+        margin-top: 3rem; }
+        #about-me .content-wrap .my-info h2 {
+          font-size: 3rem;
+          text-align: center;
+          margin-bottom: 3rem; }
+          #about-me .content-wrap .my-info h2:after {
+            content: "";
+            height: 1px;
+            width: 20%;
+            margin: 0 auto;
+            margin-top: 3rem; }
+        #about-me .content-wrap .my-info p {
+          width: 100%;
+          text-align: center;
+          font-size: 2rem;
+          padding: 0 1rem; }
+          #about-me .content-wrap .my-info p:nth-last-child(1) {
+            margin-bottom: 6rem !important; }
+        #about-me .content-wrap .my-info .info-btn {
+          display: block; }
+          #about-me .content-wrap .my-info .info-btn-1 {
+            margin-bottom: 5rem; }
+          #about-me .content-wrap .my-info .info-btn a {
+            margin: 0 auto;
+            transition: all 0.5s ease-in-out; }
+      #about-me .content-wrap .photo-icons {
+        display: block;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center; }
+        #about-me .content-wrap .photo-icons .icon-group img {
+          width: 50px;
+          height: 50px;
+          margin: .5rem .5rem;
+          background: #12FFF7;
+          border-radius: 50%;
+          padding: 8px; }
+  .menu-btn {
+    right: 2.5rem;
+    top: 2.5rem; }
+  .menu-nav {
+    display: block;
+    text-align: center;
+    padding-top: 13rem; }
+    .menu-nav .nav-link {
+      padding: 1rem;
+      font-size: 3rem;
+      display: inline-block; }
+  .contact-form {
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 8rem; }
+    .contact-form .contact {
+      display: block;
+      text-align: center; }
+      .contact-form .contact h2 {
+        padding-top: 3rem;
+        line-height: 1;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+        font-style: italic; }
+        .contact-form .contact h2:after {
+          content: "";
+          height: .2rem;
+          margin: 3rem auto;
+          background-color: rgba(189, 189, 189, 0.596);
+          width: 20%; }
+      .contact-form .contact h4 {
+        margin-top: 1rem;
+        line-height: 1.2;
+        font-size: 3rem;
+        margin-bottom: 8rem;
+        padding: 0 2rem; }
+      .contact-form .contact .contact-me {
+        display: grid;
+        width: 80%;
+        grid-gap: .7rem;
+        margin: 0 auto; }
+  #footer {
+    margin: 0;
+    height: 8vh; }
+    #footer p {
+      color: rgba(189, 189, 189, 0.596);
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 1rem; }
+    #footer .footer-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      border-bottom: 1px solid rgba(189, 189, 189, 0.596);
+      padding: .5rem;
+      margin: 1rem 2rem; }
+      #footer .footer-container .footer-icons a {
+        padding: .8rem;
+        margin: 1rem auto; }
+        #footer .footer-container .footer-icons a:hover {
+          color: #12FFF7; }
+  #projects .projects {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem; }
+    #projects .projects h2 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      font-style: italic; }
+      #projects .projects h2:after {
+        content: "";
+        height: .1rem;
+        margin: 3rem auto;
+        width: 20%; }
+    #projects .projects .project-card {
+      display: block;
+      width: 100%;
+      margin: 2rem auto; }
+      #projects .projects .project-card .wrapper {
+        position: relative;
+        margin: 0 auto; }
+        #projects .projects .project-card .wrapper img {
+          width: 100%;
+          opacity: 1;
+          transition: all 0.5s ease-in-out; }
+        #projects .projects .project-card .wrapper .content {
+          text-align: center;
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          overflow: hidden; }
+          #projects .projects .project-card .wrapper .content h3 {
+            font-size: 1.8rem;
+            padding: .5rem 0;
+            z-index: -2; }
+          #projects .projects .project-card .wrapper .content p {
+            display: inline;
+            padding: 1rem;
+            font-size: 1.4rem; }
+          #projects .projects .project-card .wrapper .content a {
+            display: block;
+            margin: 2rem auto;
+            width: 200px; }
+        #projects .projects .project-card .wrapper .overlay {
+          opacity: 0;
+          transition: all 0.5s ease-in-out; }
+        #projects .projects .project-card .wrapper .wrapper:hover img {
+          opacity: .5;
+          transition: all 0.5s ease-in-out; }
+  .photo-icons .icon-group img {
+    width: 150px;
+    margin: .5rem .5rem;
+    background: #12FFF7;
+    border-radius: 50%;
+    padding: 8px; } }

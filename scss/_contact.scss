@@ -4,6 +4,7 @@
     background: $secondary-text;
     color: set-text-color($secondary-text);
     padding-bottom: 15rem;
+    @include easeOut();
 
     .contact {
         display: grid;
@@ -63,7 +64,7 @@
                 @include easeOut();
 
                 &:hover {
-                    border: .3px solid $primary-color;
+                    border: .3px solid $devider-color;
                     @include easeOut();
                     
                     
@@ -81,9 +82,9 @@
                  -webkit-box-shadow: $box-shadow-dark;
         box-shadow: $box-shadow-dark;
         margin-bottom: 3rem;
-                @include easeOut();
+                
                 &:hover {
-                    border: .3px solid $primary-color;
+                    border: .3px solid $devider-color;
                     @include easeOut();
                 }
             }

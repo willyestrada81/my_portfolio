@@ -8,13 +8,14 @@
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+        align-items: start;
         grid-gap: 2rem;
         width: 90%;
         margin-bottom: 25rem;
         padding-top: 16rem;
         @include easeOut();
         
-        .my-photo {
+        .my-photo { 
             img{
             width: 250px;
             height: 250px;

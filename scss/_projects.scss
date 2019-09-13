@@ -1,6 +1,7 @@
 #projects {
     margin: 0;
     height: auto;
+    box-sizing: border-box;
 
     .projects {
         padding: 4rem 16rem;
@@ -28,8 +29,9 @@
             grid-template-columns: 1fr 1fr;
             width: 80%;
             margin: 0 auto;
-            grid-auto-rows: minmax(420px, auto);
-            // grid-gap: 1rem;
+            // grid-auto-rows: minmax(420px, auto);
+            grid-row-gap: .5rem;
+            grid-column-gap: .9rem;
 
             .wrapper {
                 position: relative;
@@ -46,7 +48,6 @@
                 
             }
                 &:hover {
-                border: 1px solid $secondary-color;
                 @include easeOut();
                 
             }
@@ -88,7 +89,16 @@
                width: 200px;
                
            }
+           .project-desc-btn{
+        border: $secondary-color 1px solid;
+        letter-spacing: 0;
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
 
+        i {
+            padding-left: 1rem;
+        }
+           }
                 
             }
 

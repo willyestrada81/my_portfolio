@@ -8,7 +8,7 @@ $heading-color: #B3FFAB;
 $heading-color-less-opacity: rgba(179, 255, 171, 0.26);
 $primary-text: #212121;
 $secondary-text: #fff7f7;
-$devider-color: #BDBDBD;
+$devider-color: rgba(189, 189, 189, 0.596);
 $text-icons: #ebecee;
 $heading-font: 'Quattrocento', serif;
 $paragraph-font: 'Fanwood Text', serif;
@@ -100,17 +100,17 @@ $background-opacity: 0.9;
 // Media Query Mixins
 
 @mixin deviceSm {
-    @media screen and (max-width: 500px ) {
+    @media only screen and (min-device-width : 320px)and (max-device-width : 480px){
         @content;
     }
 }
 @mixin deviceMd {
-    @media screen and (max-width: 768px ) {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
         @content;
     }
 }
 @mixin deviceLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
         @content;
     }
 }

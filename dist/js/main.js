@@ -12,6 +12,17 @@ let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
 
+navItems.forEach(item => item.addEventListener('click', () => {
+    menuBtn.classList.remove('close');
+    menu.classList.remove('show');
+    menuBranding.classList.remove('show');
+    menuNav.classList.remove('show');
+    navItems.forEach(item => item.classList.remove('show'));
+
+    showMenu = false;
+}));
+
+
 function toggleMenu() {
     if(!showMenu) {
         menuBtn.classList.add('close');
@@ -35,14 +46,15 @@ function toggleMenu() {
 
 window.onscroll = () => {
     const nav = document.querySelector("#navbar");
-    if (this.scrollY <= 10) nav.className = "";
-    else nav.className = "scroll";
+    const logo = document.querySelector(".my-logo");
+    if (this.scrollY <= 10) {
+        nav.className = "";
+        logo.src = "/dist/img/william Estrada logo.PNG";
+    } else {
+        nav.className = "scroll";
+        logo.src = "/dist/img/william Estrada logo_black.PNG";
+
+    }
 };
 
 
-function onMouseOver() {
-    document.getElementById("project-card").className = 'project-desc-no-img';
-}
-function onMouseOut() {
-    document.getElementById("project-card").className = 'project-desc';
-}
