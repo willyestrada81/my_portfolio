@@ -49,10 +49,10 @@ window.onscroll = () => {
     const logo = document.querySelector(".my-logo");
     if (this.scrollY <= 10) {
         nav.className = "";
-        logo.src = "/dist/img/william Estrada logo.PNG";
+        logo.src = "img/william Estrada logo.PNG";
     } else {
         nav.className = "scroll";
-        logo.src = "/dist/img/william Estrada logo_black.PNG";
+        logo.src = "img/william Estrada logo_black.PNG";
 
     }
 };
