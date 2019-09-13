@@ -15,7 +15,7 @@
     <header id="home">
         <nav id="navbar">
             <a href="#" id="logo">
-                <img class="my-logo" src="img/william Estrada logo.PNG" alt="William Estrada Logo">
+                <img class="my-logo" src="img/william_Estrada_logo_white.PNG" alt="William Estrada Logo">
             </a>
             <ul>
                 <li class="nav-item">
@@ -194,14 +194,18 @@
         <div class="contact">
             <h2>Contact Me</h2>
             <h4>I'm here to help. Just say hi!</h4>
-            <form action="" class="contact-me" id="contact_id">
-                <label for="name_id"></label>
-                <input type="text" name="name" id="name_id" placeholder="Your name" required>
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="contact-me" id="contact_id">
+            <input type=hidden name="oid" value="00D6A000002jDA7">
+            <input type=hidden name="retURL" value="https://willyestrada81.github.io/my_portfolio/">
+                <label for="first_name"></label>
+                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required placeholder="Your Name"/>
+                
                 <label for="email"></label>
-                <input type="email" name="email" id="email_id" placeholder="Your Email" required>
+                <input id="email" maxlength="80" name="email" size="20" type="text" required placeholder="Your Email"/>
+                
                 <label for="message"></label>
-                <textarea form="contact_id" name="message" id="message-id" spellcheck="true" placeholder="Your Message"></textarea>
-                <button class="btn-secondary" type="submit">Say hi!</button>
+                <textarea id="00N3u00000OVbbc" name="00N3u00000OVbbc" type="text" wrap="soft" spellcheck="true" placeholder="Your Message"></textarea>
+                <button class="btn-secondary" type="submit" name="submit">Say hi!</button>
             </form>
         </div>
 
