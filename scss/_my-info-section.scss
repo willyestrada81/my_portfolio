@@ -103,7 +103,8 @@ a {
                 img {
                     width: 50px;
                     margin: .5rem .5rem;
-                    background: $secondary-color;
+                    background: lighten($color: $primary-color, $amount: 70);
+                    opacity: .9;
                     border-radius: 50%;
                     padding: 8px;
                 
