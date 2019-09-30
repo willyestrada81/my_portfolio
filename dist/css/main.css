@@ -111,18 +111,33 @@
           left: 50%;
           transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
-          overflow: hidden; }
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          width: 90%; }
           #projects .projects .project-card .wrapper .content h3 {
             font-size: 2.5rem;
-            padding: 1rem 0;
-            z-index: -2; }
+            padding: 2rem 0;
+            z-index: -2;
+            margin-top: 2rem;
+            margin-bottom: 0; }
+          #projects .projects .project-card .wrapper .content ul {
+            padding: 0;
+            margin: 0; }
+            #projects .projects .project-card .wrapper .content ul li {
+              list-style: none;
+              display: inline-block;
+              padding: 2rem;
+              font-size: 1.5rem; }
           #projects .projects .project-card .wrapper .content p {
-            display: inline;
-            padding: 1rem;
-            font-size: 1.4rem; }
+            font-size: 2rem; }
           #projects .projects .project-card .wrapper .content .project-description {
-            height: 10px;
-            margin: 4rem 0; }
+            width: 100%;
+            margin-bottom: 3rem; }
+          #projects .projects .project-card .wrapper .content .project-info {
+            margin-bottom: 2rem;
+            height: auto; }
           #projects .projects .project-card .wrapper .content a {
             display: block;
             margin: 4rem auto;
@@ -131,12 +146,12 @@
             border: #12FFF7 1px solid;
             letter-spacing: 0;
             font-size: 1.5rem;
-            padding: 1rem 1.5rem;
-            margin-top: 3rem; }
+            padding: 1rem 1.5rem; }
             #projects .projects .project-card .wrapper .content .project-desc-btn i {
               padding-left: 1rem; }
-          #projects .projects .project-card .wrapper .content .link-btn {
-            margin-top: 2rem; }
+          #projects .projects .project-card .wrapper .content .link-btn a {
+            margin: 0.5rem;
+            display: inline; }
         #projects .projects .project-card .wrapper .overlay {
           opacity: 0;
           transition: all 0.5s ease-in-out; }
@@ -669,42 +684,72 @@ header {
         margin: 3rem auto;
         width: 20%; }
     #projects .projects .project-card {
-      display: block;
-      width: 100%;
-      margin: 2rem auto; }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 80%;
+      margin: 0 auto;
+      grid-row-gap: .5rem;
+      grid-column-gap: .9rem; }
       #projects .projects .project-card .wrapper {
         position: relative;
         margin: 0 auto; }
+        #projects .projects .project-card .wrapper:hover .overlay {
+          opacity: 1;
+          transition: all 0.5s ease-in-out; }
+        #projects .projects .project-card .wrapper:hover img {
+          opacity: .1; }
+        #projects .projects .project-card .wrapper:hover {
+          transition: all 0.5s ease-in-out; }
         #projects .projects .project-card .wrapper img {
           width: 100%;
           opacity: 1;
+          height: 100%;
+          object-fit: fill;
           transition: all 0.5s ease-in-out; }
-        #projects .projects .project-card .wrapper .content {
-          text-align: center;
-          position: absolute;
-          top: 45%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          overflow: hidden; }
-          #projects .projects .project-card .wrapper .content h3 {
-            font-size: 4rem;
-            padding: .5rem 0;
-            z-index: -2; }
-          #projects .projects .project-card .wrapper .content p {
-            display: inline;
-            padding: 1rem;
-            font-size: 1.4rem; }
-          #projects .projects .project-card .wrapper .content a {
-            display: block;
-            margin: 2rem auto;
-            width: 200px; }
+        #projects .projects .project-card .wrapper .content h3 {
+          font-size: 1.5rem;
+          padding: 1.5rem 0;
+          margin-top: 1.5rem; }
+        #projects .projects .project-card .wrapper .content ul {
+          padding: 0;
+          margin: 0; }
+          #projects .projects .project-card .wrapper .content ul li {
+            list-style: none;
+            display: inline-block;
+            padding: .5rem;
+            font-size: .8rem; }
+        #projects .projects .project-card .wrapper .content p {
+          font-size: 1rem; }
+        #projects .projects .project-card .wrapper .content .project-description {
+          width: 100%;
+          margin-bottom: 1rem; }
+        #projects .projects .project-card .wrapper .content .project-info {
+          margin-bottom: .5rem;
+          height: auto; }
+        #projects .projects .project-card .wrapper .content a {
+          display: block;
+          margin: 1rem auto;
+          width: 200px;
+          font-size: 1rem !important; }
+        #projects .projects .project-card .wrapper .content .project-desc-btn {
+          border: #12FFF7 1px solid;
+          letter-spacing: 0;
+          padding: .5rem 1rem; }
+          #projects .projects .project-card .wrapper .content .project-desc-btn i {
+            padding-left: 1rem; }
+        #projects .projects .project-card .wrapper .content .link-btn a {
+          margin: 0.5rem;
+          display: inline; }
         #projects .projects .project-card .wrapper .overlay {
           opacity: 0;
           transition: all 0.5s ease-in-out; }
         #projects .projects .project-card .wrapper .wrapper:hover img {
           opacity: .5;
           transition: all 0.5s ease-in-out; }
+  #projects .more-projects p {
+    margin-bottom: 8rem;
+    text-align: center;
+    font-size: 1.5rem; }
   .photo-icons .icon-group img {
     width: 150px;
     margin: .5rem .5rem;
@@ -873,44 +918,58 @@ header {
         width: 20%; }
     #projects .projects .project-card {
       display: block;
-      width: 100%;
-      margin: 2rem auto; }
+      width: 95%;
+      margin: 0 auto; }
       #projects .projects .project-card .wrapper {
         position: relative;
         margin: 0 auto; }
+        #projects .projects .project-card .wrapper:hover .overlay {
+          opacity: 1;
+          transition: all 0.5s ease-in-out; }
+        #projects .projects .project-card .wrapper:hover img {
+          opacity: .1; }
+        #projects .projects .project-card .wrapper:hover {
+          transition: all 0.5s ease-in-out; }
         #projects .projects .project-card .wrapper img {
           width: 100%;
           opacity: 1;
+          height: 100%;
+          object-fit: fill;
           transition: all 0.5s ease-in-out; }
-        #projects .projects .project-card .wrapper .content {
-          text-align: center;
-          position: absolute;
+        #projects .projects .project-card .wrapper .content h3 {
+          font-size: 1.5rem;
+          padding: 1.5rem 0;
+          margin-top: 1.5rem; }
+        #projects .projects .project-card .wrapper .content ul {
+          padding: 0;
+          margin: 0; }
+          #projects .projects .project-card .wrapper .content ul li {
+            list-style: none;
+            display: inline-block;
+            padding: .5rem;
+            font-size: .8rem; }
+        #projects .projects .project-card .wrapper .content p {
+          font-size: 1rem; }
+        #projects .projects .project-card .wrapper .content .project-description {
           width: 100%;
-          top: 45%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          overflow: hidden; }
-          #projects .projects .project-card .wrapper .content h3 {
-            font-size: 1.2rem;
-            padding: .5rem 0;
-            z-index: -2; }
-          #projects .projects .project-card .wrapper .content p {
-            display: inline;
-            width: 80%;
-            padding: 1rem;
-            font-size: 1rem;
-            margin-bottom: 1rem; }
-          #projects .projects .project-card .wrapper .content a {
-            display: block;
-            margin: 2rem auto;
-            width: 170px; }
-          #projects .projects .project-card .wrapper .content .project-desc-btn {
-            font-size: 1.2rem;
-            padding: .5rem 1rem;
-            margin-top: 4rem; }
-            #projects .projects .project-card .wrapper .content .project-desc-btn i {
-              padding-left: 1rem; }
+          margin-bottom: 1rem; }
+        #projects .projects .project-card .wrapper .content .project-info {
+          margin-bottom: .5rem;
+          height: auto; }
+        #projects .projects .project-card .wrapper .content a {
+          display: block;
+          margin: 1rem auto;
+          width: 200px;
+          font-size: 1rem !important; }
+        #projects .projects .project-card .wrapper .content .project-desc-btn {
+          border: #12FFF7 1px solid;
+          letter-spacing: 0;
+          padding: .5rem 1rem; }
+          #projects .projects .project-card .wrapper .content .project-desc-btn i {
+            padding-left: 1rem; }
+        #projects .projects .project-card .wrapper .content .link-btn a {
+          margin: 0.5rem;
+          display: inline; }
         #projects .projects .project-card .wrapper .overlay {
           opacity: 0;
           transition: all 0.5s ease-in-out; }
